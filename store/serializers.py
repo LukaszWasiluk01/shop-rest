@@ -26,5 +26,5 @@ class ProductListSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Product
-        exclude = ('author', 'description', 'category',)
+        exclude = ('author', 'description', 'category', 'phone_number')
     
