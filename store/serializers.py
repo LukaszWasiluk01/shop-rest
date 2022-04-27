@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Product
+from .models import Product, Category
 from django.contrib.auth import get_user_model
 
 UserModel = get_user_model()
@@ -27,4 +27,8 @@ class ProductListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         exclude = ('author', 'description', 'category', 'phone_number')
-    
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = '__all__'
