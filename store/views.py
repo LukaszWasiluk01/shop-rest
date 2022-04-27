@@ -33,3 +33,4 @@ class CategoryListAPI(generics.ListAPIView):
     model = Category
     serializer_class = CategorySerializer
     queryset = Category.objects.all()
+    pagination_class = None
