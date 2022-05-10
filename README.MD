@@ -164,6 +164,10 @@ Example response:
 
 + **/product/{product_id}/** [PUT, PATCH] - update particular product (must be author)
 
+Headers : 
+  + KEY: Authorization
+  + VALUE: Token {user_token}
+
 Content: 
     
     {
@@ -180,3 +184,7 @@ province - one of provinces, which are listed above
 category - primary key of category (check Category endpoint)
 
 + **/product/{product_id}/** [DELETE] - delete particular product (must be author)
+
+Headers : 
+  + KEY: Authorization
+  + VALUE: Token {user_token}
